@@ -8,7 +8,7 @@ public class MatheoPvpClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		KeyBindings.register();
-		TntTimerRenderer.register();
+		PvpClientHud.register(); // TNT-timer, FPS, koordinater (HudElementRegistry for 1.21)
 		ReachHitboxRenderer.register();
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -28,14 +28,16 @@ public class MatheoPvpClient implements ClientModInitializer {
 				client.setScreen(new PvpClientScreen());
 			}
 
-			// Auto sprint
-			boolean forward = client.options.forwardKey.isPressed();
-			if (forward && !client.player.isSneaking()
-					&& !client.player.horizontalCollision
-					&& client.player.isOnGround()
-					&& !client.player.isTouchingWater()
-					&& !client.player.isUsingItem()) {
-				client.player.setSprinting(true);
+			// Auto sprint (når W holdes, ikke sneak/vann/item)
+			if (ModConfig.isAutoSprint()) {
+				boolean forward = client.options.forwardKey.isPressed();
+				if (forward && !client.player.isSneaking()
+						&& !client.player.horizontalCollision
+						&& client.player.isOnGround()
+						&& !client.player.isTouchingWater()
+						&& !client.player.isUsingItem()) {
+					client.player.setSprinting(true);
+				}
 			}
 		});
 	}

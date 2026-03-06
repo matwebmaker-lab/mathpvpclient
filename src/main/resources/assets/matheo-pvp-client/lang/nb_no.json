@@ -2,10 +2,16 @@
 	"key.matheo_pvp_client.category": "Matheo PvP Client",
 	"key.matheo_pvp_client.open_menu": "Åpne meny",
 
-	"menu.matheo_pvp_client.title": "Matheo PvP Client – Innstillinger",
+	"menu.matheo_pvp_client.title": "Matheo PvP Client",
+	"menu.matheo_pvp_client.category.visuals": "Visuelt",
+	"menu.matheo_pvp_client.category.hud": "HUD",
+	"menu.matheo_pvp_client.auto_sprint": "Auto sprint",
 	"menu.matheo_pvp_client.fullbright": "Fullbright",
 	"menu.matheo_pvp_client.tnt_timer": "TNT-timer",
-	"menu.matheo_pvp_client.reach_hitbox": "Rød hitbox (slåavstand)",
+	"menu.matheo_pvp_client.reach_hitbox": "Slåavstand-hitbox",
+	"menu.matheo_pvp_client.fps": "FPS-visning",
+	"menu.matheo_pvp_client.coords": "Koordinater",
+	"menu.matheo_pvp_client.armor": "Rustningsstatus",
 	"menu.matheo_pvp_client.on": "På",
 	"menu.matheo_pvp_client.off": "Av",
 	"menu.matheo_pvp_client.close": "Lukk"
