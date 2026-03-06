@@ -106,4 +106,27 @@ public class ModConfig {
 	public static void toggleShowArmor() {
 		showArmor = !showArmor;
 	}
+
+	// HUD-posisjoner (flyttbare elementer)
+	private static int fpsX = 6, fpsY = 6;
+	private static int coordsX = 6, coordsY = 18;
+	private static int tntX = 6, tntY = 30;
+	private static int armorX = 6, armorY = 42;
+
+	public static int getFpsX() { return fpsX; }
+	public static void setFpsX(int x) { fpsX = x; }
+	public static int getFpsY() { return fpsY; }
+	public static void setFpsY(int y) { fpsY = y; }
+	public static int getCoordsX() { return coordsX; }
+	public static void setCoordsX(int x) { coordsX = x; }
+	public static int getCoordsY() { return coordsY; }
+	public static void setCoordsY(int y) { coordsY = y; }
+	public static int getTntX() { return tntX; }
+	public static void setTntX(int x) { tntX = x; }
+	public static int getTntY() { return tntY; }
+	public static void setTntY(int y) { tntY = y; }
+	public static int getArmorX() { return armorX; }
+	public static void setArmorX(int x) { armorX = x; }
+	public static int getArmorY() { return armorY; }
+	public static void setArmorY(int y) { armorY = y; }
 }

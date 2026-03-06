@@ -12,7 +12,11 @@
 	"menu.matheo_pvp_client.fps": "FPS display",
 	"menu.matheo_pvp_client.coords": "Coordinates",
 	"menu.matheo_pvp_client.armor": "Armor status",
+	"menu.matheo_pvp_client.mods": "MODS",
 	"menu.matheo_pvp_client.on": "On",
 	"menu.matheo_pvp_client.off": "Off",
-	"menu.matheo_pvp_client.close": "Close"
+	"menu.matheo_pvp_client.close": "Close",
+	"menu.matheo_pvp_client.done": "Done",
+	"menu.matheo_pvp_client.hud_layout_title": "Move HUD elements",
+	"menu.matheo_pvp_client.hud_layout_hint": "Drag the boxes to where you want them in-game"
 }

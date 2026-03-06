@@ -1,7 +1,6 @@
 package no.matheo.pvpclient;
 
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
@@ -22,50 +21,49 @@ public class PvpClientHud {
 
 	private static final Identifier HUD_ID = Identifier.of("matheo-pvp-client", "overlay");
 	private static final int RANGE = 64;
-	private static final int X = 6;
 	private static final int LINE_HEIGHT = 10;
 	private static final int TNT_COLOR = 0xFFDD00;
 	private static final int TEXT_COLOR = 0xFFFFFF;
 
 	public static void register() {
-		HudElementRegistry.attachElementAfter(
-				VanillaHudElements.MISC_OVERLAYS,
-				HUD_ID,
-				PvpClientHud::render
-		);
+		// addLast så vi ikke arver hideGui – HUD vises når spilleren er i verden
+		HudElementRegistry.addLast(HUD_ID, PvpClientHud::render);
 	}
 
 	private static void render(DrawContext context, RenderTickCounter tickCounter) {
 		MinecraftClient client = MinecraftClient.getInstance();
 		if (client.player == null || client.world == null) return;
 
-		int y = 6;
-
-		// FPS
+		// FPS (flyttbar posisjon)
 		if (ModConfig.isShowFps()) {
 			int fps = client.getCurrentFps();
-			context.drawText(client.textRenderer, Text.literal("FPS: " + fps), X, y, TEXT_COLOR, true);
-			y += LINE_HEIGHT;
+			context.drawText(client.textRenderer, Text.literal("FPS: " + fps), ModConfig.getFpsX(), ModConfig.getFpsY(), TEXT_COLOR, true);
 		}
 
-		// Koordinater
+		// Koordinater (flyttbar posisjon)
 		if (ModConfig.isShowCoords()) {
 			int px = MathHelper.floor(client.player.getX());
 			int py = MathHelper.floor(client.player.getY());
 			int pz = MathHelper.floor(client.player.getZ());
-			context.drawText(client.textRenderer, Text.literal(String.format("XYZ: %d %d %d", px, py, pz)), X, y, TEXT_COLOR, true);
-			y += LINE_HEIGHT;
+			context.drawText(client.textRenderer, Text.literal(String.format("XYZ: %d %d %d", px, py, pz)), ModConfig.getCoordsX(), ModConfig.getCoordsY(), TEXT_COLOR, true);
 		}
 
-		// TNT-timer
+		// TNT-timer (første flyttbar; flere TNT under hverandre)
 		if (ModConfig.isTntTimer()) {
 			Box box = client.player.getBoundingBox().expand(RANGE);
 			List<TntEntity> tntList = client.world.getEntitiesByType(EntityType.TNT, box, e -> true);
+			int ty = ModConfig.getTntY();
 			for (TntEntity tnt : tntList) {
 				double seconds = tnt.getFuse() / 20.0;
-				context.drawText(client.textRenderer, Text.literal(String.format("TNT: %.1fs", seconds)), X, y, TNT_COLOR, true);
-				y += LINE_HEIGHT;
+				context.drawText(client.textRenderer, Text.literal(String.format("TNT: %.1fs", seconds)), ModConfig.getTntX(), ty, TNT_COLOR, true);
+				ty += LINE_HEIGHT;
 			}
+		}
+
+		// Armor (flyttbar posisjon)
+		if (ModConfig.isShowArmor()) {
+			int armor = client.player.getArmor();
+			context.drawText(client.textRenderer, Text.literal("Armor: " + armor), ModConfig.getArmorX(), ModConfig.getArmorY(), TEXT_COLOR, true);
 		}
 	}
 }

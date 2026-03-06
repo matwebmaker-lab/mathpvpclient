@@ -12,7 +12,11 @@
 	"menu.matheo_pvp_client.fps": "FPS-visning",
 	"menu.matheo_pvp_client.coords": "Koordinater",
 	"menu.matheo_pvp_client.armor": "Rustningsstatus",
+	"menu.matheo_pvp_client.mods": "MODS",
 	"menu.matheo_pvp_client.on": "På",
 	"menu.matheo_pvp_client.off": "Av",
-	"menu.matheo_pvp_client.close": "Lukk"
+	"menu.matheo_pvp_client.close": "Lukk",
+	"menu.matheo_pvp_client.done": "Ferdig",
+	"menu.matheo_pvp_client.hud_layout_title": "Flytt HUD-elementer",
+	"menu.matheo_pvp_client.hud_layout_hint": "Dra boksene til der du vil ha dem i spillet"
 }
