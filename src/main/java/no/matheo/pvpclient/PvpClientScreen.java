@@ -77,6 +77,16 @@ public class PvpClientScreen extends Screen {
 						: Text.translatable("menu.matheo_pvp_client.off"));
 	}
 
+	/**
+	 * Override to avoid blur – "Can only blur once per frame" in 1.21 when Fabric/game already used blur.
+	 * Tegner enkel mørk bakgrunn uten blur, som andre PvP-clients.
+	 */
+	@Override
+	public void renderBackground(DrawContext context, int mouseX, int mouseY, float delta) {
+		// Semi-transparent dark overlay, no blur
+		context.fill(0, 0, this.width, this.height, 0xC0_10_10_10);
+	}
+
 	@Override
 	public void render(DrawContext context, int mouseX, int mouseY, float delta) {
 		super.render(context, mouseX, mouseY, delta);
