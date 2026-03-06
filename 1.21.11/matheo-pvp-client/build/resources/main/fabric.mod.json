@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
 	"id": "matheo-pvp-client",
-	"version": "${version}",
+	"version": "1.0.0",
 	"name": "Matheo PvP Client",
-	"description": "PvP client med auto sprint for Minecraft Fabric",
+	"description": "PvP client for Minecraft 1.21.11 (Fabric) – auto sprint, meny, fullbright, TNT-timer, reach hitbox, HUD",
 	"authors": ["Matheo"],
 	"contact": {},
 	"license": "MIT",
