@@ -12,7 +12,16 @@ public class MatheoPvpClient implements ClientModInitializer {
 		ReachHitboxRenderer.register();
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			if (client.player == null || client.options == null) return;
+			if (client.options == null) return;
+
+			// Fullbright: sett gamma høyt (uten mixin – 1.21.11)
+			if (ModConfig.isFullbright()) {
+				client.options.getGamma().setValue(16.0);
+			} else {
+				client.options.getGamma().setValue(1.0);
+			}
+
+			if (client.player == null) return;
 
 			// Høyre Shift: åpne meny
 			while (KeyBindings.OPEN_MENU.wasPressed()) {

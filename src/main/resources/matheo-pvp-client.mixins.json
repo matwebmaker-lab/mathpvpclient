@@ -4,7 +4,6 @@
 	"package": "no.matheo.pvpclient.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"GameRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
