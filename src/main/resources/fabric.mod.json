@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "matheo-pvp-client",
+	"version": "${version}",
+	"name": "Matheo PvP Client",
+	"description": "PvP client med auto sprint for Minecraft Fabric",
+	"authors": ["Matheo"],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/matheo-pvp-client/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["no.matheo.pvpclient.MatheoPvpClient"]
+	},
+	"mixins": [
+		"matheo-pvp-client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

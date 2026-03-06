@@ -1,0 +1,12 @@
+{
+	"key.matheo_pvp_client.category": "Matheo PvP Client",
+	"key.matheo_pvp_client.open_menu": "Open menu",
+
+	"menu.matheo_pvp_client.title": "Matheo PvP Client – Settings",
+	"menu.matheo_pvp_client.fullbright": "Fullbright",
+	"menu.matheo_pvp_client.tnt_timer": "TNT timer",
+	"menu.matheo_pvp_client.reach_hitbox": "Red hitbox (reach)",
+	"menu.matheo_pvp_client.on": "On",
+	"menu.matheo_pvp_client.off": "Off",
+	"menu.matheo_pvp_client.close": "Close"
+}

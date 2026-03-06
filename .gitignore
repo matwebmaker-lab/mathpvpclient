@@ -1,0 +1,42 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.code-workspace
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Minecraft / Loom
+run/
+out/
+logs/
+
+# Local / env
+*.log
+.env
+.env.local
+
+# Temp/backup
+build.gradle.backup
+build.gradle.minimal
+
+# Fabric (uncomment if you don't want to track)
+# gradle/wrapper/gradle-wrapper.jar
