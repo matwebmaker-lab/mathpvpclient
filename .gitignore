@@ -1,7 +1,7 @@
 # Gradle
 .gradle/
 build/*
-# JAR i build/libs skal med i repo
+# Inkluder JAR-filer i build/libs i repo
 !build/libs/
 !build/libs/*.jar
 
@@ -19,27 +19,24 @@ build/*
 .settings/
 bin/
 
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
 # Minecraft / Loom
 run/
 out/
 logs/
 
-# Local / env
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Env / logs
 *.log
 .env
 .env.local
 
-# Temp/backup
+# Backup
+*.backup
+*.bak
 build.gradle.backup
 build.gradle.minimal
-
-# Fabric (uncomment if you don't want to track)
-# gradle/wrapper/gradle-wrapper.jar

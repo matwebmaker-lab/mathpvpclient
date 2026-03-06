@@ -1,11 +1,12 @@
 # Matheo PvP Client
 
-Matheo PvP Client is an open source Minecraft PvP Client for **1.21.11** using [Fabric](https://fabricmc.net/).
+Matheo PvP Client is an open source Minecraft PvP Client for **1.21.11** using [Fabric](https://fabricmc.net/).  
+README-struktur og stil er inspirert av [Cloud Client](https://github.com/cloudclientdev/cloudclient).
 
 ## Downloading
 
 - Download the mod from the **Releases** section here
-- Or build from source (see [Building](#building)) and copy the JAR from `1.21.11/matheo-pvp-client/build/libs/` to `.minecraft/mods`
+- Or build from source (see [Building](#building)) and copy the JAR from `build/libs/` to `.minecraft/mods`
 
 ## Screenshots
 
@@ -24,17 +25,14 @@ Matheo PvP Client is an open source Minecraft PvP Client for **1.21.11** using [
 ## Workspace Setup
 
 1. Clone or download the repository (git or zip).
-2. Open the folder **`1.21.11/matheo-pvp-client`** and copy its path.
-3. Open a command prompt or terminal and change directory to that path:
+2. Open the project folder in a terminal and go to that directory:
 
    ```
-   cd path/to/Matheo-lager-pvp-client/1.21.11/matheo-pvp-client
+   cd path/to/Matheo-lager-pvp-client
    ```
 
-4. Create the workspace for your IDE:
-   - **IntelliJ IDEA:** Open the `1.21.11/matheo-pvp-client` folder as a Gradle project (Fabric Loom).
-   - **VS Code:** Open the folder and use the Gradle extension.
-5. Run the client in development:
+3. Open the folder in **IntelliJ IDEA** or **VS Code** as a Gradle project (Fabric Loom).
+4. Run the client in development:
 
    ```
    .\gradlew.bat runClient
@@ -43,11 +41,11 @@ Matheo PvP Client is an open source Minecraft PvP Client for **1.21.11** using [
 
 ## Building
 
-1. Open the folder **`1.21.11/matheo-pvp-client`** and copy its path.
+1. Open the project folder and copy its path.
 2. Open a command prompt or terminal and change directory to that path:
 
    ```
-   cd path/to/Matheo-lager-pvp-client/1.21.11/matheo-pvp-client
+   cd path/to/Matheo-lager-pvp-client
    ```
 
 3. Make a build:
@@ -60,7 +58,7 @@ Matheo PvP Client is an open source Minecraft PvP Client for **1.21.11** using [
 4. You will find the JAR in:
 
    ```
-   1.21.11/matheo-pvp-client/build/libs/matheo-pvp-client-1.0.0.jar
+   build/libs/matheo-pvp-client-1.0.0.jar
    ```
 
 5. Copy the JAR into your `.minecraft/mods` folder and launch Minecraft with Fabric 1.21.11.
@@ -102,5 +100,4 @@ See [LICENSE](LICENSE) for full text.
 
 ## About
 
-An open source Minecraft PvP Client for 1.21.11 (Fabric).  
-Repository structure inspired by [Cloud Client](https://github.com/cloudclientdev/cloudclient).
+An open source Minecraft PvP Client for 1.21.11 (Fabric).
