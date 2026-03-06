@@ -1,6 +1,9 @@
 # Gradle
 .gradle/
-build/
+build/*
+# JAR i build/libs skal med i repo
+!build/libs/
+!build/libs/*.jar
 
 # IDE
 .idea/
